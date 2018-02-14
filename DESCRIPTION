@@ -1,12 +1,12 @@
 Package: DAGselection
 Type: Package
-Title: Selecting a proper DAG
+Title: Selecting a proper Directed acyclic graph (DAG) for discrete, normal and zero-inflated data.
 Version: 0.1.0
 Author: Yejiong Zhu
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Maintainer: Yejiong Zhu <zhuyejiong@gmail.com>
+Description: This package is designed for finding the best Directed acyclic graph for discrete, normal and zero-inflated data by using dynamic programming.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 LinkingTo: Rcpp
+RoxygenNote: 6.0.1

@@ -1,6 +1,16 @@
 
-require(snow) ## for parallel computation
-library(Rcpp)
+#' Title
+#'
+#' This function is used to covert the dataset to a contingincy table.
+#'
+#' @param data the raw dataset
+#'
+#'
+#'
+#'
+#'
+
+
 
 convert_ct = function(data)
 {
@@ -8,7 +18,6 @@ convert_ct = function(data)
   ct[ct!=0]=1
   return(ct)
 }
-
 
 prelim = function(data) ##where data is a data frame which as least has 2 column
 {
@@ -242,6 +251,26 @@ get_ordering = function(all_names)
   return(ord)
 }
 
+#' Title
+#'
+#' This function is used to find the best bayesian network for dicrete, gaussian and zero-inflated data.
+#'
+#' @param ct the contingincy table converted from data
+#' @param data dataset
+#' @param num_p the maximum number of parents
+#' @param type a character representing the type of your data. Choosing from "discrete","gausssian","zero_inflated"
+#' @param clustersize the number of parallel
+#' @details
+#' This function is used to find the best bayesian network for dicrete, gaussian and zero-inflated data by using dynamic programming.
+#'
+#' @return
+#' @param DAG represents the best bayesian network
+#' @param score represents the score of the bayesian network
+#'
+#' @author Yejiong Zhu
+#'
+#'
+#'
 dag = function(ct = NULL,data = NULL,num_p,type=c("discrete","gaussian","zero_inflated"),clustersize)
 {
   if(is.null(ct))
